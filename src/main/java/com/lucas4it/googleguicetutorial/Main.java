@@ -11,8 +11,8 @@ import com.lucas4it.googleguicetutorial.module.BusinessInterfaceModuleAlternativ
  * @author lfilipkiewicz
  * 
  * Tutorials links:
- * 4programmers.net/Java/Guice
- * 
+ * http://4programmers.net/Java/Guice
+ * http://4programmers.net/Java/Guice/Metody_wstrzykiwania_zale%C5%BCno%C5%9Bci
  * 
  * 
  */
@@ -54,6 +54,13 @@ public class Main {
         mainAlternative.callBusinessInterface();
         
         
+        
+        Injector guiceInjectorViaSetter = Guice.createInjector(new BusinessInterfaceModule());
+        MainInjectViaSetter mainInjectViaSetter = guiceInjectorViaSetter.getInstance(MainInjectViaSetter.class);
+        
+        System.out.println("Calling MainInjectViaSetter class...");
+        mainInjectViaSetter.callBusinessInterface();
+             
     }
     
     
