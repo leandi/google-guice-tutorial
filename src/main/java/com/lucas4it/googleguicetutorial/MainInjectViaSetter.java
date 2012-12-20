@@ -25,7 +25,7 @@ public class MainInjectViaSetter {
 
     /**
      * Method must have parameters, which can be injected. All injecting classes must be added to Guice configuration.
-     * The method can return a value but there is no posibility to get this value.
+     * The method can return a value but there is no possibility to get this value.
      * There can be many methods with Inject annotation and setting the same field. All will be called.
      * 
      * @param businessInterface
